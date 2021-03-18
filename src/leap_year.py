@@ -16,6 +16,7 @@ assert is_leap(2008) is True
 assert is_leap(2024) is True
 assert is_leap(2036) is True
 assert is_leap(2038) is False
+assert is_leap(2000) is True
 
 # year = int(input())
 # print(is_leap(year=year))
