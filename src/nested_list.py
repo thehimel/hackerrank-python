@@ -1,4 +1,6 @@
 """
+https://www.hackerrank.com/challenges/nested-list
+
 Given a multi dimensional array with name and score.
 
 Get the person with the second highest score.
@@ -26,29 +28,22 @@ Multiple students can have same max score.
 
 
 def solution(students):
-    scores = []
-    for student in students:
-        scores.append(student[1])
+    scores = [student[1] for student in students]
 
     scores.sort()
-    lowest_score = scores[0]
+    lowest = scores[0]
 
-    # Fetch the score that is greater than the lowest_score
+    # Fetch the score that is greater than the lowest
     for score in scores:
-        if score > lowest_score:
-            second_lowest_score = score
+        if score > lowest:
+            second_lowest = score
             break
 
-    if not second_lowest_score:
-        second_lowest_score = lowest_score
+    if not second_lowest:
+        second_lowest = lowest
 
     # Get a list of names with the second lowest score.
-    names = []
-    for student in students:
-        name = student[0]
-        score = student[1]
-        if score == second_lowest_score:
-            names.append(name)
+    names = [student[0] for student in students if student[1] == second_lowest]
 
     # Sort the list of names
     return sorted(names)
