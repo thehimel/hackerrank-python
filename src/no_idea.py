@@ -1,7 +1,7 @@
 """
 https://www.hackerrank.com/challenges/no-idea
 
-Note: Incomplete
+Note: Incomplete! All tests didn't pass.
 
 Initially happiness = 0.
 If your choice is in likes, increment happiness by 1.
