@@ -23,17 +23,32 @@ Output:
 """
 
 
+def convert(destination, source):
+    for item in source:
+        if item.isnumeric():
+            destination[item] = '_'
+
+
 def solution(two, three, four):
-    choices = two.split()
-    likes = three.split()
-    dislikes = four.split()
+    likes = dict()
+    convert(likes, three)
+
+    dislikes = dict()
+    convert(dislikes, four)
+
     happiness = 0
 
-    for choice in choices:
-        if choice in likes:
-            happiness += 1
-        elif choice in dislikes:
-            happiness -= 1
+    for choice in two:
+        if choice.isnumeric():
+            try:
+                if likes[choice]:
+                    happiness += 1
+            except Exception:
+                try:
+                    if dislikes[choice]:
+                        happiness -= 1
+                except Exception:
+                    pass
 
     return happiness
 
