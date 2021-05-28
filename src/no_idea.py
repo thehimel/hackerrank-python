@@ -1,6 +1,8 @@
 """
 https://www.hackerrank.com/challenges/no-idea
 
+Note: Incomplete
+
 Initially happiness = 0.
 If your choice is in likes, increment happiness by 1.
 Else if your choice is in dislikes, decrement happiness by 1.
