@@ -8,15 +8,15 @@ Catch the exceptions.
 """
 
 
-def divide(left, right):
-    """Divide left by right.
+def divide(dividend, divisor):
+    """Divide dividend by divisor.
 
-    :param str left: Dividend.
-    :param str right: Divisor.
+    :param str dividend: Dividend.
+    :param str divisor: Divisor.
     :return: quotient or exception information.
     """
     try:
-        return int(left) // int(right)
+        return int(dividend) // int(divisor)
     except (ZeroDivisionError, ValueError) as exception:
         return f"{exception.__class__.__name__}: {exception}"
 
